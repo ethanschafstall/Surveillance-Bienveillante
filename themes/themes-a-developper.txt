@@ -5,5 +5,5 @@ Sécurité des données
 Nos cibe
 Cross platform de l'application
 données d'utilisateurs
-L'enlèvement temps réal
+Les événements de temps réal
 Le partage/représentation des données
