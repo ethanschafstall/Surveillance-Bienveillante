@@ -1,9 +1,17 @@
 Thèmes à développer;
 
-Sécurité de la personne
-Sécurité des données
-Nos cibe
+Les données: 
+Sécurité
+Types
+Récolte
+Traitement
+Représentation
+Événements de temps réal
+
+Humain:
+Les cibes
+Sécurité des personnes
+
+Application:
 Cross platform de l'application
-données d'utilisateurs
-Les événements de temps réal
-Le partage/représentation des données
+
