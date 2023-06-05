@@ -1,12 +1,13 @@
 Thèmes à développer;
 
-Les données: 
+Données: 
 Sécurité
 Types
 Récolte
 Traitement
 Représentation
 Événements de temps réal
+Solutions AI
 
 Humain:
 Les cibes
