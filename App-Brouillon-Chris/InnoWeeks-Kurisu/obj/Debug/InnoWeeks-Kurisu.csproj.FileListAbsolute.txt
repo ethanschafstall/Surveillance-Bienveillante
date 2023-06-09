@@ -9,3 +9,6 @@ C:\Users\pd31xsk\Desktop\App-Brouillon-Chris\InnoWeeks-Kurisu\obj\Debug\InnoWeek
 C:\Users\pd31xsk\Desktop\App-Brouillon-Chris\InnoWeeks-Kurisu\obj\Debug\InnoWeeks-Kurisu.csproj.CoreCompileInputs.cache
 C:\Users\pd31xsk\Desktop\App-Brouillon-Chris\InnoWeeks-Kurisu\obj\Debug\InnoWeeks-Kurisu.exe
 C:\Users\pd31xsk\Desktop\App-Brouillon-Chris\InnoWeeks-Kurisu\obj\Debug\InnoWeeks-Kurisu.pdb
+C:\Users\pd31xsk\Desktop\App-Brouillon-Chris\InnoWeeks-Kurisu\obj\Debug\InnoWeeks_Kurisu.Form2.resources
+C:\Users\pd31xsk\Desktop\App-Brouillon-Chris\InnoWeeks-Kurisu\obj\Debug\InnoWeeks_Kurisu.FormManager.resources
+C:\Users\pd31xsk\Desktop\App-Brouillon-Chris\InnoWeeks-Kurisu\obj\Debug\InnoWeeks_Kurisu.Form3.resources

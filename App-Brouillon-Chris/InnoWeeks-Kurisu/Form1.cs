@@ -13,6 +13,7 @@ namespace InnoWeeks_Kurisu
     public partial class Form1 : Form
     {
         public List<TextBox> textBoxes = new List<TextBox>();
+        public TextBox lastTextBox;
 
         public Form1()
         {
@@ -44,14 +45,21 @@ namespace InnoWeeks_Kurisu
                     {
                         textbox.Text = "";
                     }
-                    else if (textbox.Text == "")
-                    {
-                        textbox.Text = textbox.Tag.ToString();
-                    }
-                }                
+                }
             }
-            
+            if (lastTextBox != null)
+            {
+                if (lastTextBox.Text == "" && lastTextBox != null)
+                {
+                    lastTextBox.Text = lastTextBox.Tag.ToString();
+                }
+            }
         }
+
+
+
+
+        
 
         /// <summary>
         /// Method to Get all controls of one type
@@ -63,101 +71,93 @@ namespace InnoWeeks_Kurisu
         {
             var controls = control.Controls.Cast<Control>();
 
-            return controls.SelectMany(ctrl => GetAll(ctrl, type))
-                                      .Concat(controls)
-                                      .Where(c => c.GetType() == type);
+            return controls.SelectMany(ctrl => GetAll(ctrl, type)).Concat(controls).Where(c => c.GetType() == type);
         }
 
         private void tbUserLastName_Click(object sender, EventArgs e)
         {
             RefreshTBNames(tbUserLastName);
-            foreach (TextBox textBox in textBoxes)
-            {
-                textBox.Focus();
-            }
+            lastTextBox = tbUserLastName;
         }
 
         private void tbUserFirstName_Click(object sender, EventArgs e)
         {
 
             RefreshTBNames(tbUserFirstName);
-            foreach (TextBox textBox in textBoxes)
-            {
-                textBox.Focus();
-            }
+            lastTextBox = tbUserFirstName;
         }
 
         private void tbUserBirthDate_Click(object sender, EventArgs e)
         {
 
             RefreshTBNames(tbUserBirthDate);
-            foreach (TextBox textBox in textBoxes)
-            {
-                textBox.Focus();
-            }
+            lastTextBox = tbUserBirthDate;
         }
 
         private void tbUserAddress_Click(object sender, EventArgs e)
         {
             
             RefreshTBNames(tbUserAddress);
-            foreach (TextBox textBox in textBoxes)
-            {
-                textBox.Focus();
-            }
+            lastTextBox = tbUserAddress;
         }
 
         private void tbUserCity_Click(object sender, EventArgs e)
         {
             RefreshTBNames(tbUserCity);
-            foreach (TextBox textBox in textBoxes)
-            {
-                textBox.Focus();
-            }
+            lastTextBox = tbUserCity;
         }
 
         private void tbDoctorLastName_Click(object sender, EventArgs e)
         {
             RefreshTBNames(tbDoctorLastName);
-            foreach (TextBox textBox in textBoxes)
-            {
-                textBox.Focus();
-            }
+            lastTextBox = tbDoctorLastName;
         }
 
         private void tbDoctorFirstName_Click(object sender, EventArgs e)
         {
             RefreshTBNames(tbDoctorFirstName);
-            foreach (TextBox textBox in textBoxes)
-            {
-                textBox.Focus();
-            }
+            lastTextBox = tbDoctorFirstName;
         }
 
         private void tbDoctorBirthDate_Click(object sender, EventArgs e)
         {
             RefreshTBNames(tbDoctorBirthDate);
-            foreach (TextBox textBox in textBoxes)
-            {
-                textBox.Focus();
-            }
+            lastTextBox = tbDoctorBirthDate;
         }
 
         private void tbDoctorAddress_Click(object sender, EventArgs e)
         {
             RefreshTBNames(tbDoctorAddress);
-            foreach (TextBox textBox in textBoxes)
-            {
-                textBox.Focus();
-            }
+            lastTextBox = tbDoctorAddress;
         }
 
         private void tbDoctorCity_Click(object sender, EventArgs e)
         {
             RefreshTBNames(tbDoctorCity);
-            foreach (TextBox textBox in textBoxes)
+            lastTextBox = tbDoctorCity;
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            foreach(TextBox textBox in GetAll(this, typeof(TextBox)))
             {
-                textBox.Focus();
+                if(textBox.Text == textBox.Tag.ToString())
+                {
+                    MessageBox.Show("Veuillez entrer toutes les informations");
+                    break;
+                }
+                else 
+                {
+                    //create an instance of form 3
+                    var form2 = new Form2();
+                    //hide me (form1)
+                    Hide();
+                    //show form2
+                    form2.Show();
+                    //close me (form1), since form1 is the message loop - no problem.
+                    Close();
+                    break;
+                }
             }
         }
     }

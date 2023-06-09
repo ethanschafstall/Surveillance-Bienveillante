@@ -224,6 +224,7 @@
             this.btnConfirm.TabIndex = 16;
             this.btnConfirm.Text = "Enregistrer";
             this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // lblVersion
             // 
